@@ -6,6 +6,7 @@
   --button-yellow: #fbce51;
   --title-red: #f54932;
   --border-gray: #d0d0d0;
+  --link-blue: #3057a2;
 }
 
 html {
@@ -161,9 +162,9 @@ p {
 
 /* hero */
 
-.hero {
+.hero__section {
   padding-top: 70px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .hero__container {
@@ -205,8 +206,17 @@ p {
 .hero__date {
   display: flex;
   justify-content: space-between;
-  gap: 16.5px;
-  padding: 0 72px 0 44.5px;
+  /* gap: 16.5px; */
+  /* padding: 0 72px 0 44.5px; */
+  padding: 0 72px 0 590px;
+  margin-left: 44.5px;
+  background-image: url(../assets/images/session.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.hero__img {
+  width: auto;
 }
 
 .hero__info {
@@ -294,4 +304,15 @@ p {
   top: 50%;
 }
 
+.hero__link {
+  color: var(--link-blue);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+}
 
+/* stages */
+
+.stages__section {
+  
+}

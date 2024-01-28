@@ -3,7 +3,9 @@
   --font-black: #313131;
   --button-black: #1f1f1f;
   --white: #fff;
-  --button-yellow: #FBCE51;
+  --button-yellow: #fbce51;
+  --title-red: #f54932;
+  --border-gray: #d0d0d0;
 }
 
 html {
@@ -57,13 +59,14 @@ p {
 .container {
   max-width: 1366px;
   padding: 0 72px;
+  margin: 0 auto;
 }
 
 /* header */
 
 .header {
   max-width: 1920px;
-  height: 881px;
+  /* height: 881px; */
   background-image: url(../assets/images/header-bg-full.png);
   background-size: auto;
   background-position: center top;
@@ -72,6 +75,7 @@ p {
 
 .header__container {
   padding-top: 26px;
+  padding-bottom: 118px;
 }
 
 .header__logo {
@@ -131,7 +135,7 @@ p {
   font-size: 16px;
   font-weight: 500;
   line-height: 130%;
-  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .header__button_dark {
@@ -154,3 +158,140 @@ p {
   background-color: var(--button-black);
   color: var(--white);
 }
+
+/* hero */
+
+.hero {
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.hero__container {
+  padding: 0;
+}
+
+.hero__tournament {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  padding: 0 72px;
+}
+
+.hero__title {
+  max-width: 764px;
+  color: #313131;
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+.tournament__img {
+  max-width: 394px;
+  max-height: 250px;
+}
+
+.hero__naming {
+  color: var(--title-red);
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 135%;
+  text-transform: uppercase;
+}
+
+.hero__date {
+  display: flex;
+  justify-content: space-between;
+  gap: 16.5px;
+  padding: 0 72px 0 44.5px;
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 27.81px;
+}
+
+.info__title {
+  margin-bottom: 60px;
+}
+
+.hero__table {
+  margin-bottom: 48px;
+}
+
+.table {
+  border-collapse: collapse;
+  border: 2px solid var(--white); /* Прячем рамку вокруг таблицы */
+}
+
+.table__header {
+  width: 45%;
+  color: var(--font-black);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.7;
+}
+
+.table__header,
+.table__data {
+  padding: 3px; /* Поля вокруг содержимого таблицы */
+  border: 1px solid var(--border-gray); /* Параметры рамки */
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+.table__data {
+  width: 55%;
+  color: var(--font-black);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  padding: 0 0 15px 15px;
+}
+
+.table__row:not(:last-child):not(:first-child) .table__header {
+  padding: 15px 15px 15px 0;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.table__row:first-child .table__header {
+  padding: 0 15px 15px 0;
+}
+
+.table__row:last-child .table__header {
+  padding: 15px 15px 0 0;
+}
+
+.table__row:not(:last-child):not(:first-child) .table__data {
+  padding: 15px 0 15px 15px;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.table__row:first-child .table__data {
+  padding: 0 0 15px 15px;
+}
+
+.table__row:last-child .table__data {
+  padding: 15px 0 0 15px;
+}
+
+.table__data_strike {
+  position: relative;
+}
+
+.table__data_strike::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--title-red);
+  left: 0;
+  top: 50%;
+}
+
+

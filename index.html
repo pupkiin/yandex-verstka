@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <script defer src="./scripts/carousel.js"></script>
+    <script defer src="./scripts/marquee.js"></script>
   </head>
   <body>
     <header class="header">
@@ -67,11 +68,14 @@
               />
             </svg>
           </div>
-          <span class="header__name"> клуб четырех коней </span>
+          <span class="header__name"> клуб четырех&nbsp;коней </span>
         </div>
 
         <h1 class="header__title">
-          Превратите уездный город в столицу земного шара
+          Превратите 
+          <span class="header__title_left">уездный город</span>
+          <span class="header__title_right">в столицу</span>
+          <span class="header__title_center">земного шара</span>
         </h1>
         <p class="header__descr">
           Оплатите взнос на телеграммы для организации Международного
@@ -89,11 +93,24 @@
     </header>
 
     <main class="main">
-      <div>бегущая строка</div>
+      <div class="marquee__wrapper header__marquee_wrapper">
+        <p class="marquee header__marquee">
+          <span class="marquee__text"
+            >Дело помощи утопающим — дело рук самих утопающих!
+          </span>
+          <span class="marquee__text"
+            >Шахматы двигают вперед не только культуру, но и экономику!
+          </span>
+          <span class="marquee__text"
+            >Лед тронулся, господа присяжные заседатели!
+          </span>
+        </p>
+      </div>
+
       <section class="section hero__section">
         <div class="container hero__container">
           <div class="hero__tournament">
-            <h3 class="hero__title tournament__title">
+            <h3 class="hero__title">
               Чтобы поддержать Международный&nbsp;васюкинский турнир посетите
               лекцию на тему:
               <span class="hero__naming title__naming"
@@ -108,7 +125,7 @@
           </div>
 
           <div class="hero__date">
-            <!-- <img class="hero__img" src="./assets/images/session.png" alt="tournament" /> -->
+            <img class="hero__img" src="./assets/images/session.png" alt="tournament" />
             <div class="hero__info">
               <h3 class="hero__title info__title">
                 и Сеанс
@@ -182,7 +199,7 @@
               <div class="stages__info">
                 <div class="stages__number">3</div>
                 <p class="stages__text">
-                  Поднятие сельского хозяйства в радиусе на тысячу километров:
+                  Поднятие сельского хозяйства в радиусе на&laquo;тысячу километров:
                   производство овощей, фруктов, икры, шоколадных конфет
                 </p>
               </div>
@@ -190,14 +207,14 @@
             <div class="stages__block">
               <div class="stages__info">
                 <div class="stages__number">4</div>
-                <p class="stages__text">Строительство дворца для турнира</p>
+                <p class="stages__text">Строительство дворца для&laquo;турнира</p>
               </div>
             </div>
             <div class="stages__block">
               <div class="stages__info">
                 <div class="stages__number">5</div>
                 <p class="stages__text">
-                  Размещение гаражей для гостевого автотранспорта
+                  Размещение гаражей для&laquo;гостевого автотранспорта
                 </p>
               </div>
             </div>
@@ -235,7 +252,10 @@
           <div class="members__title_block">
             <h2 class="members__title">Участники турнира</h2>
             <div class="members__button_block">
-              <button id="members__button_left" class="members__button members__button_left">
+              <button
+                id="members__button_left"
+                class="members__button members__button_left"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="44"
@@ -259,10 +279,13 @@
                 </svg>
               </button>
               <div class="members__pages_block">
-                <span class="members__pages members__pages_left">3</span>
+                <span id="members__pages_left" class="members__pages members__pages_left">3</span>
                 <span class="members__pages members__pages_right">/ 6</span>
               </div>
-              <button id="members__button_right" class="members__button members__button_right">
+              <button
+                id="members__button_right"
+                class="members__button members__button_right"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="44"
@@ -378,12 +401,30 @@
           </div>
         </div>
       </section>
-      <div>running words</div>
+
+      <div class="marquee__wrapper footer__marquee_wrapper">
+        <p class="marquee footer__marquee">
+          <span class="marquee__text"
+            >Дело помощи утопающим — дело рук самих утопающих!
+          </span>
+          <span class="marquee__text"
+            >Шахматы двигают вперед не только культуру, но и экономику!
+          </span>
+          <span class="marquee__text"
+            >Лед тронулся, господа присяжные заседатели!
+          </span>
+        </p>
+      </div>
     </main>
 
     <footer class="footer">
       <div class="container footer__container">
-        <p class="footer__text">Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта. С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова &laquo;Двенадцать стульев&raquo;.</p>
+        <p class="footer__text">
+          Все персонажи, события и&nbsp;цитаты являются вымышленными
+          и&nbsp;не&nbsp;принадлежат создателям сайта. С&nbsp;подробностями
+          можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа
+          и&nbsp;Евгения Петрова &laquo;Двенадцать стульев&raquo;.
+        </p>
       </div>
     </footer>
   </body>

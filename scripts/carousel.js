@@ -8,6 +8,8 @@ let width = listElems[0].offsetWidth;
 
 let position = 0; // положение ленты прокрутки
 
+let elementSeen = document.getElementById('members__pages_left');
+
 buttonLeft = document.getElementById('members__button_left');
 buttonRight = document.getElementById('members__button_right')
 buttonLeft.setAttribute("disabled", "disabled");
@@ -20,6 +22,7 @@ buttonLeft.onclick = function () {
   if (position >= 0) {
     buttonLeft.setAttribute("disabled", "disabled");
     buttonRight.removeAttribute("disabled");
+    elementSeen.textContent = '3';
   }
 };
 
@@ -27,6 +30,7 @@ buttonRight.onclick = function () {
   if (position <= (width * 6) + (20 * 6)) {
     buttonLeft.removeAttribute("disabled");
     buttonRight.setAttribute("disabled", "disabled");
+    elementSeen.textContent = '6';
   }
   
   position -= (width * count) + 60;
